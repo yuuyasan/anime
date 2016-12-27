@@ -1,0 +1,410 @@
+    @import './base.less';
+    @import './iconfont.less';
+    // 新番简要说明
+    .bgm-item-abstract {
+        position: relative;
+        width: 700px;
+        font-size: 16px;
+        background: #E7F2FD;
+        //border: 1px solid #D5DCF2;
+        .item-title {
+            padding: 10px;
+            width: 210px;
+            text-align: center;
+            float: left;
+        }
+        .item-jptime,
+        .item-cntime {
+            padding: 10px;
+            width: 110px;
+            float: left;
+            span {
+                display: inline-block;
+                margin-right: 7px;
+            }
+        }
+        .item-station {
+            padding: 10px;
+            width: 150px;
+            float: left;
+            text-align: center;
+            li {
+                padding-right: 5px;
+                margin: 0 5px 5px 0;
+                border-right: 2px solid #666;
+                display: inline-block;
+            }
+            li:last-child {
+                border-right: 0;
+            }
+            .no-sites {
+                color: #999;
+            }
+        }
+        .heart-wrapper{
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            width: 30px;
+            height: 20px;
+            margin-top: -15px;
+            span{
+                font-size: 28px;
+                color:rgba(255, 165, 147, 0.58);
+            }
+        }
+    }
+    .interested{
+        .heart-wrapper{
+            display: block;
+        }
+    }
+    
+    //新番detail
+    .bgm-item-detail {
+        max-height: 0;
+        background: #F8F8F8;
+        width: 660px;
+        margin: 0 auto;
+        overflow: hidden;
+        border-bottom-left-radius: 10px;
+        border-bottom-rigth-radius: 10px;
+        transition: all .5s ease;
+        p {
+            margin-left: 10px;
+            font-size: 16px;
+            height: 30px;
+            line-height: 30px;
+            span {
+                color: #C7C7C7;
+            }
+            a {
+                display: inline-block;
+                margin: 0 7px;
+            }
+        }
+        .item-filter {
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            label {
+                display: inline-block;
+                margin-right: 15px;
+            }
+            span {
+                display: inline-block;
+                margin-right: 20px;
+            }
+        }
+        // &.hide{
+        //     display: none;
+        // }
+    }
+    
+    //新番item
+    .bgm-item {
+        width: 700px;
+        margin-bottom: 8px;
+        cursor: pointer;
+        &.show-detail {
+            .bgm-item-detail {
+                max-height: 126px;
+            }
+        }
+    }
+    
+    //新番列表
+    .bgm-list {
+        padding-left: 8px;
+        width: 700px;
+        min-height: 540px;
+        background: #fff;
+        float: left;
+        .error-tip {
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+            &.hide {
+                display: none;
+            }
+        }
+    }
+    
+    //侧边栏
+    .side-filter-bar {
+        width: 100px;
+        font-size: 16px;
+        background: #F2F5F6;
+        float: left;
+        .side-item {
+            margin-bottom: 8px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-left: 5px solid transparent;
+            cursor: pointer;
+            &:hover,
+            &.selected {
+                background: #fff;
+                border-left: 5px solid #80B0FF;
+            }
+        }
+    }
+    
+    //content
+    .content-wrapper {
+        .search-wrapper {
+            width: 800px;
+            margin: 0 auto;
+            h1 {
+                font-size: 35px;
+                color: #233241;
+                line-height: 70px;
+                float: left;
+            }
+            .search-content {
+                float: right;
+                h3 {
+                    color: #34495E;
+                    margin: 10px 0;
+                }
+                .search-box-wrapper {
+                    width: 220px;
+                    height: 30px;
+                    float: right;
+                    border: 1px solid #80B0FF;
+                    border-radius: 2px;
+                    .search-box {
+                        border: 0;
+                        outline: 0;
+                        width: 175px;
+                        height: 30px;
+                        padding-left: 10px;
+                        line-height: 30px;
+                    }
+                    .icon-search {
+                        display: inline-block;
+                        width: 35px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .table-wrapper {
+            width: 808px;
+            margin: 20px auto;
+            background: #F2F5F6;
+            border-radius: 5px 5px 0 0;
+            .table-header {
+                width: 808px;
+                height: 45px;
+                line-height: 45px;
+                background: #80B0FF;
+                color: #fff;
+                font-size: 16px;
+                border-radius: 5px 5px 0 0;
+                a,
+                span {
+                    text-align: center;
+                    display: inline-block;
+                }
+                .config-btn {
+                    margin: 0 30px;
+                    width: 50px;
+                    height: 30px;
+                    line-height: 30px;
+                    background: #5778B1;
+                    color: #fff;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+                .header-title {
+                    width: 200px;
+                }
+                .header-showtime-jp,
+                .header-showtime-cn {
+                    width: 135px;
+                }
+                .header-station {
+                    margin-left: 5px;
+                    width: 170px;
+                }
+            }
+        }
+    }
+    
+    .bgm-header-wrapper {
+        margin-bottom: 20px;
+        background: #34495E;
+        color: #fff;
+        height: 45px;
+        .bgm-header {
+            width: 800px;
+            margin: 0 auto;
+            h1 {
+                margin-right: 30px;
+                line-height: 45px;
+                font-weight: normal;
+                float: left;
+            }
+            .history-data-choose {
+                position: relative;
+                height: 45px;
+                float: left;
+                z-index: 12;
+                h2 {
+                    line-height: 48px;
+                    cursor: pointer;
+                }
+                .history-year {
+                    display: none;
+                    position: absolute;
+                    top: 45px;
+                    left: -22px;
+                    width: 115px;
+                    background: #34495E;
+                    color: #fff;
+                    border-radius: 0 0 5px 5px;
+                    .year-item {
+                        position: relative;
+                        width: 115px;
+                        height: 35px;
+                        line-height: 35px;
+                        text-align: center;
+                        font-size: 16px;
+                        cursor: pointer;
+                        .history-month {
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            left: 115px;
+                            width: 95px;
+                            background: #233241;
+                            border-radius: 5px;
+                            .month-item {
+                                cursor: pointer;
+                                &:hover {
+                                    background: #415D79;
+                                }
+                            }
+                        }
+                        &:hover {
+                            background: #5B80A6;
+                            .history-month {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .history-year {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    
+    //config-block
+    .table-content {
+        position: relative;
+        .config-block-wrapper {
+            display: none;
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            .config-block {
+                padding: 20px;
+                z-index: 11;
+                margin: 50px auto;
+                width: 660px;
+                background: #fff;
+                border-radius: 5px;
+            }
+            .left-content {
+                float: left;
+                width: 320px;
+                margin-right: 20px;
+                .setting-notice {
+                    float: left;
+                    margin-top: 20px;
+                    p {
+                        margin-top: 10px;
+                        em {
+                            color: #FF86AE;
+                        }
+                    }
+                }
+            }
+            .display-config-wrapper,
+            .station-config-wrapper {
+                float: left;
+                width: 320px;
+                h1 {
+                    margin-bottom: 20px;
+                }
+                ul {
+                    padding: 0 10px 20px;
+                    border: 1px solid #80B0FF;
+                    border-radius: 5px;
+                    overflow: hidden;
+                    li {
+                        margin-top: 20px;
+                        font-size: 16px;
+                    }
+                    .station-config-item {
+                        width: 46%;
+                        padding: 0 2%;
+                        float: left;
+                    }
+                }
+                .icon-check {
+                    display: inline-block;
+                    float: right;
+                    height: 20px;
+                    width: 20px;
+                    line-height: 22px;
+                    text-align: center;
+                    border-radius: 3px;
+                    background: #999;
+                    color: #fff;
+                    cursor: pointer;
+                    &.checked {
+                        background: #80B0FF;
+                    }
+                }
+            }
+            /*设置关闭与恢复按钮*/
+            .btn-wrapper {
+                margin-top: 20px;
+                text-align: center;
+                .btn {
+                    display: inline-block;
+                    width: 90px;
+                    height: 30px;
+                    margin-right: 10px;
+                    border: 1px solid #80B0FF;
+                    border-radius: 5px;
+                    line-height: 32px;
+                }
+                .reset-btn {
+                    background: #80B0FF;
+                    color: #fff;
+                    &:hover {
+                        background: #93B7FF;
+                        border: 1px solid #93B7FF;
+                    }
+                }
+            }
+        }
+        &.show-config {
+            .config-block-wrapper {
+                display: block;
+            }
+        }
+    }
