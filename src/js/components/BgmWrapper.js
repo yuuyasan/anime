@@ -76,7 +76,6 @@ export default class BgmWrapper extends React.Component{
         return true;
     }
     render(){
-        console.log('bgm wrapper 1')
         let day = this.props.day;
         let bgmListData = this.state.bgmListData.filter(this.decideShow.bind(this));
         let date = Utils.changePathToDate(this.props.archive.path);
