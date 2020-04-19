@@ -9,9 +9,16 @@
     "web-server": "http-server -p 3000 .",
     "start": "npm run webpack-server & npm run web-server"
   },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
     "autoprefixer-loader": "^3.2.0",
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -21,6 +28,7 @@
     "css-loader": "^0.23.1",
     "file-loader": "^0.8.5",
     "http-server": "^0.8.5",
+    "husky": "^4.2.5",
     "img-loader": "^1.2.2",
     "less": "^2.5.1",
     "less-loader": "^2.2.0",
