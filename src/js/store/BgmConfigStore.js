@@ -102,7 +102,7 @@
      }
      initSettings(name, setting) {
          switch (name) {
-             case 'config':
+             case 'configs':
                  return defaultConfig;
                  break;
              case 'station':
