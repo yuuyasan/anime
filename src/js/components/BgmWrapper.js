@@ -81,11 +81,8 @@ export default class BgmWrapper extends React.Component{
         let bgmListData = this.state.bgmListData.filter(this.decideShow.bind(this));
         let date = Utils.changePathToDate(this.props.archive.path);
         let configs = BgmConfigStore.getSettings('configs');
-<<<<<<< HEAD
         console.log(date)
-=======
         console.log(bgmListData)
->>>>>>> console list
         return(
             <div className='content-wrapper'>
                 <SearchTitle title={date} dataLength={bgmListData.length}/>
